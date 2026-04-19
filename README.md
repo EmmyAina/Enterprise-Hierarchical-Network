@@ -23,13 +23,13 @@ This project demonstrates the implementation of a scalable, redundant, and secur
 - Security (NAT): Implemented PAT (Port Address Translation) to map the internal 10.0.0.0/8 private address space to a single public IP (203.0.113.1) for secure internet access.
 
 ### 📊 Verification Results
-- Connectivity: Successful end-to-end ICMP pings from the Access Layer to external internet addresses (100.100.100.100).
+- Connectivity: Successful end-to-end ICMP pings from the Access Layer to external internet addresses (100.100.100.100).  
 ![Connectivity](./diagrams/pat.jpeg)
 
-- Translation: Verified active NAT translation tables on the Core Router showing successful internal-to-external mapping.
+- Translation: Verified active NAT translation tables on the Core Router showing successful internal-to-external mapping.  
 ![Translation](./diagrams/pat-translation.jpeg)
 
-- Routing Table: Confirmed OSPF-learned routes and the Gateway of Last Resort are correctly populated on all Layer 3 devices.
+- Routing Table: Confirmed OSPF-learned routes and the Gateway of Last Resort are correctly populated on all Layer 3 devices.  
 ![Routing](./diagrams/ospf.jpeg)
 
 
