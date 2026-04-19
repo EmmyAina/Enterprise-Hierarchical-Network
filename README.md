@@ -19,7 +19,7 @@ This project demonstrates the implementation of a scalable, redundant, and secur
 
 ### 3. Infrastructure Services
 - DHCP Services: Core-R1 acts as a centralized DHCP server for Staff, IT, and Admin VLANs.
-- DHCP Relay: Configured ip helper-addresses on SVIs to relay broadcast requests to the central server across Layer 3 boundaries.
+- DHCP Relay: Configured IP helper-addresses on SVIs to relay broadcast requests to the central server across Layer 3 boundaries.
 - Security (NAT): Implemented PAT (Port Address Translation) to map the internal 10.0.0.0/8 private address space to a single public IP (203.0.113.1) for secure internet access.
 
 ### 📊 Verification Results
@@ -31,3 +31,14 @@ This project demonstrates the implementation of a scalable, redundant, and secur
 
 - Routing Table: Confirmed OSPF-learned routes and the Gateway of Last Resort are correctly populated on all Layer 3 devices.
 ![Routing](./diagrams/ospf.jpeg)
+
+
+## 📂 Repository Contents
+- /diagrams: High-resolution network diagrams.  
+- /MOPS: Startup and running configurations for all Routers and Switches.  
+- /documentation: Detailed IP addressing scheme and VLAN assignments.
+
+## 🚀 How to Use
+1. Download the .pkt (Cisco Packet Tracer) file.  
+2. Open in Cisco Packet Tracer (v8.0+ recommended).  
+3. Use the CLI commands provided in the /Configs folder to verify the implementation.  
