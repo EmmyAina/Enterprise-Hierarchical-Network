@@ -1,0 +1,309 @@
+DIST SWITCH
+
+---------------- Dist 1--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW1
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- Dist 2--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW2
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- Dist 3--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW3
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+---------------- Dist 4--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW4
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- Dist 5--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW5
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+---------------- Dist 6--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Dist-SW6
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+!inter vlan dist to access
+interface range f0/6-10
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+!inter vlan dist to core
+interface range g0/1-2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+
+
+
+

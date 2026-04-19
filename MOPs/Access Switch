@@ -1,0 +1,446 @@
+Access Switch 
+
+
+---------------- ACC 1--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW1
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 10
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+
+---------------- ACC 2--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW2
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 10
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+---------------- ACC 3--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW3
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 20
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+---------------- ACC 4--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW4
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 20
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+
+---------------- ACC 5--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW5
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 30
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- ACC 6--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW6
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 30
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- ACC 7--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW7
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 99
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- ACC 8--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW8
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 99
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+---------------- ACC 9--------------------------
+
+!discovery + stp + protection
+en
+conf term
+hostname Accwss-SW9
+lldp run
+enable password class
+line console 0
+password cisco
+login
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+spanning-tree mode rapid-pvst
+
+
+!vlan and intervlan
+vlan 10
+name Sales
+exit
+vlan 20 
+name IT 
+exit
+vlan 30
+name Admin
+exit
+vlan 99 
+name Management
+exit
+vlan 90 
+name Servers
+exit
+
+! access to end device
+interface range f0/1-2
+switchport mode access
+switchport access vlan 99
+exit
+
+! access to dist
+interface range f0/6-7
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+exit
+
+
+
+
+
+
